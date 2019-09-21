@@ -6,6 +6,7 @@ from main_function import validation_with_try
 class MyTestCase(unittest.TestCase):
     def test_average_score(self):
         with mock.patch('builtins.input', side_effect=(-90, -95,-85)):
+         with mock.patch('builtins.input', side_effect=(-80, -88,-40)):
             self.assertRaises(ValueError)
 
 
